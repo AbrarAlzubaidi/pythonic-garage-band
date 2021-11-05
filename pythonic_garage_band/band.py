@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
 
-
 class Band():
     instances=[]
     def __init__(self,name,members=[]):
@@ -20,7 +19,6 @@ class Band():
     @classmethod
     def to_list(cls):
         return cls.instances
-
 
 
 class Musician():
@@ -87,19 +85,19 @@ class Drummer(Musician):
 
 if __name__ == "__main__":
     smoother = Band("Smoother") 
-    print("Band name: ",smoother.name)
+    # print("Band name: ",smoother.name)
   
 
     joan = Guitarist("Joan Jett")
-    print("Guitarist name: ",joan.name)
-    print(joan.get_instrument())
+    # print("Guitarist name: ",joan.name)
+    # print(joan.get_instrument())
 
     sheila = Drummer("Sheila E.")
-    print("Drummer name: ",sheila.name)
-    print(sheila.get_instrument())
+    # print("Drummer name: ",sheila.name)
+    # print(sheila.get_instrument())
 
     meshell = Bassist("Meshell Ndegeocello")
-    print("Bassist name: ",meshell.name)
-    print(meshell.get_instrument())
+    # print("Bassist name: ",meshell.name)
+    # print(meshell.get_instrument())
 
-    print("\n members: ", smoother.members)
+    # print("\n members: ", smoother.members)
