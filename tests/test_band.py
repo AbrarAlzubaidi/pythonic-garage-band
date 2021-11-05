@@ -136,11 +136,11 @@ from pythonic_garage_band.band import (
 
 
 
-def test_class_tracks_instances():
-    assert Band.to_list() == []
-    the_nobodies = Band("The Nobodies", [])
-    assert len(Band.instances) == 1
-    assert Band.instances[0] == the_nobodies
+# def test_class_tracks_instances():
+#     assert Band.to_list() == []
+#     the_nobodies = Band("The Nobodies", [])
+#     assert len(Band.instances) == 1
+#     assert Band.instances[0] == the_nobodies
 
 
 
