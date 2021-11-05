@@ -78,7 +78,6 @@ from pythonic_garage_band.band import (
 #     assert flea.get_instrument() == "bass"
 
 
-
 # def test_drummer():
 #     ginger = Drummer("Ginger Baker")
 #     assert ginger.name == "Ginger Baker"
