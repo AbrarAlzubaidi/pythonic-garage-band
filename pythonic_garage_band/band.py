@@ -1,12 +1,11 @@
 from abc import ABC, abstractmethod
 
-
 class Band():
-    Allmembers=[]
+    instances=[]
     def __init__(self,name,members=[]):
         self.name=name
         self.members=members
-        # Band.Allmembersll.append(self.members)
+        Band.instances.append(self)
 
     def play_solos(self):
         return ["face melting guitar solo","bom bom buh bom","rattle boom crash"]
@@ -19,15 +18,13 @@ class Band():
 
     @classmethod
     def to_list(cls):
-        return cls.Allmembers
-
+        return cls.instances
 
 
 class Musician():
     
     def __init__(self,name):
         self.name=name
-        Band.Allmembers.append(name)
 
     @abstractmethod
     def get_instrument(self):
@@ -35,11 +32,11 @@ class Musician():
 
     @abstractmethod
     def __str__(self):
-        return f"My name is {self.name} and I play guitar"
+         pass
 
     @abstractmethod
     def __repr__(self):
-        return f"Guitarist instance. Name = {self.name}"
+        pass
 
 
 class Guitarist(Musician):
@@ -88,19 +85,19 @@ class Drummer(Musician):
 
 if __name__ == "__main__":
     smoother = Band("Smoother") 
-    print("Band name: ",smoother.name)
+    # print("Band name: ",smoother.name)
   
 
     joan = Guitarist("Joan Jett")
-    print("Guitarist name: ",joan.name)
-    print(joan.get_instrument())
+    # print("Guitarist name: ",joan.name)
+    # print(joan.get_instrument())
 
     sheila = Drummer("Sheila E.")
-    print("Drummer name: ",sheila.name)
-    print(sheila.get_instrument())
+    # print("Drummer name: ",sheila.name)
+    # print(sheila.get_instrument())
 
     meshell = Bassist("Meshell Ndegeocello")
-    print("Bassist name: ",meshell.name)
-    print(meshell.get_instrument())
+    # print("Bassist name: ",meshell.name)
+    # print(meshell.get_instrument())
 
-    print("\n members: ", smoother.members)
+    # print("\n members: ", smoother.members)
